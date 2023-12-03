@@ -17,18 +17,6 @@ services:
     networks:
       - game_node_app
 
-  portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - 9000:9000
-      - 9443:9443
-
-    volumes:
-      - portainer:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: always
-
-
 networks:
   game_node_app:
     external: true
@@ -36,6 +24,3 @@ networks:
 volumes:
   # Nginx Proxy Manager
   npm:
-
-  portainer:
-
