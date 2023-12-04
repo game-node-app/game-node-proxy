@@ -44,7 +44,7 @@ services:
       - supertokens-db
 
     environment:
-      MYSQL_CONNECTION_URI: mysql://${SUPERTOKENS_DB_USER}:${SUPERTOKENS_DB_PASS}@db:3306/supertokens
+      MYSQL_CONNECTION_URI: mysql://${SUPERTOKENS_DB_USER}:${SUPERTOKENS_DB_PASS}@supertokens-db:3306/supertokens
 
     networks:
       - game_node_app
