@@ -21,9 +21,9 @@ services:
     hostname: supertokens-db
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASS}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_ROOT_PASSWORD: ${SUPERTOKENS_DB_PASS}
+      MYSQL_USER: ${SUPERTOKENS_DB_USER}
+      MYSQL_PASSWORD: ${SUPERTOKENS_DB_PASS}
       MYSQL_DATABASE: supertokens
 
     networks:
@@ -44,7 +44,7 @@ services:
       - supertokens-db
 
     environment:
-      MYSQL_CONNECTION_URI: mysql://${DB_USER}:${DB_PASS}@db:3306/supertokens
+      MYSQL_CONNECTION_URI: mysql://${SUPERTOKENS_DB_USER}:${SUPERTOKENS_DB_PASS}@db:3306/supertokens
 
     networks:
       - game_node_app
