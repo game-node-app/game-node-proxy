@@ -67,6 +67,11 @@ services:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
 
+    restart: always
+
+    networks:
+      - game_node_app
+
 networks:
   game_node_app:
     external: true
