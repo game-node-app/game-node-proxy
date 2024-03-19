@@ -16,10 +16,12 @@ services:
       - npm:/etc/letsencrypt
 
     networks:
-      - game_node_app
+      - game_node_app_public
+
+
 
 networks:
-  game_node_app:
+  game_node_app_public:
     external: true
 
 volumes:
